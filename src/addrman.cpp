@@ -236,9 +236,9 @@ void CAddrMan::MakeTried(CAddrInfo& info, int nId, int nOrigin)
     std::set<int> &vNew = vvNew[nUBucket];
 
     // remove the to-be-replaced tried entry from the tried set
-    CAddrInfo& infoOld = mapInfo[vTried[nPos]];
-    infoOld.fInTried = false;
-    infoOld.nRefCount = 1;
+    CAddrInfo& inBARld = mapInfo[vTried[nPos]];
+    inBARld.fInTried = false;
+    inBARld.nRefCount = 1;
     // do not update nTried, as we are going to move something else there immediately
 
     // check whether there is place in that one, 
